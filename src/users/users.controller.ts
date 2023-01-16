@@ -1,4 +1,4 @@
-import { Controller, Delete, Get, HttpException, Post, Put, UseFilters } from '@nestjs/common';
+import { Controller, Delete, Get, HttpException, Param, Post, Put, UseFilters } from '@nestjs/common';
 import { HttpExceptionFilter } from 'src/http-exception.filter';
 import { UsersService } from './users.service';
 
@@ -14,7 +14,7 @@ export class UsersController {
     }
 
     @Get(":id")
-    getOneUser() {
+    getOneUser(@Param() param) {
         return "one user";
     }
 
