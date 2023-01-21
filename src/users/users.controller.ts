@@ -11,7 +11,7 @@ export class UsersController {
 
     @Get()
     allAllUser() {
-        return "all user";
+        return "Get users";
     }
 
     @Get(":id")
